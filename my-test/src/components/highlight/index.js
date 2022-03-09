@@ -3,11 +3,11 @@ import Videos from "../videos"
 
 export default function Highlight() {
     return (
-        <div className="flex flex-row w-12/12">
-            <div className="w-8/12">
+        <div className="flex flex-col md:flex-row w-12/12">
+            <div className="w-full md:w-8/12">
                 <Videos />
             </div>
-            <div className="w-4/12">
+            <div className="hidden md:flex w-4/12">
                 <Activities />
             </div>
         </div>

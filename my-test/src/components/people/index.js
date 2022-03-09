@@ -35,37 +35,43 @@ export default function People() {
                 <div className="w-2/12 text-2xl text-white ml-2">People</div>
                 <div className="w-10/12 text-center text-white">view all</div>
             </div>
-            <div className="w-12/12 flex flex-row">
-                <div className="w-8/12">
+            <div className="flex flex-col md:flex-row w-12/12">
+                <div className="w-12/12 md:w-8/12">
                     <div>
                         {
                             highlight.map((e, i) => {
                                 return (
                                     <div key={i} className="w-12/12 m-2 cursor-pointer">
-                                        <div className="text-white p-2 pt-56 absolute truncate z-10">
+                                        <div className="flex flex-col justify-end box-content w-[10rem] md:w-auto h-32 smm:h-[10rem] lg:h-4 xl:h-24 3xl:h-56 14inc:h-[6rem] 15inc:h-32 16inc:h-40 17inc:h-48
+                                    18inc:h-52 19inc:h-60 20inc:h-64 21inc:h-64 22inc:h-64 23inc:h-72 24inc:h-80 25inc:h-80 26inc:h-[23rem] 27inc:h-96 28inc:h-[26rem] 29inc:h-[27rem] 30inc:h-44 31inc:h-48 32inc:h-80 text-white p-2 md:pt-56 absolute truncate z-10">
                                             <div className="text-2xl font-bold">{e.author}</div>
-                                            <div className="flex flex-row justify-between">
+                                            <div className="flex flex-col md:flex-row">
                                                 <div >1000 views</div>
                                             </div>
                                         </div>
-                                        <img className="static object-contain" src={e.download_url} alt="" />
+                                        <div className="w-12/12">
+                                            <img className="static object-contain" src={e.download_url} alt="" />
+                                        </div>
                                     </div>
                                 )
                             })
                         }
                     </div>
-                    <div className="flex flex-row">
+                    <div className="flex flex-col md:flex-row">
                         {
                             highlightBottom.map((e, i) => {
                                 return (
-                                    <div key={i} className="m-2 w-6/12 cursor-pointer">
-                                        <div className="text-white p-2 pt-20 absolute truncate z-10">
+                                    <div key={i} className="w-12/12 m-2 cursor-pointer">
+                                        <div className="flex flex-col justify-end box-content h-[7.5rem] smm:h-[10rem] lg:h-[6rem] xl:h-[9rem] 3xl:h-[9rem] 14inc:h-[9rem] 15inc:h-[10rem] 16inc:h-[10rem] 17inc:h-[11rem]
+                                        18inc:h-[11rem] 19inc:h-[12rem] 20inc:h-[13rem] 21inc:h-[13rem] 22inc:h-[14rem] 23inc:h-[15rem] 24inc:h-[15rem] 25inc:h-[16rem] 26inc:h-[17rem] 27inc:h-[18rem] 28inc:h-[18.5rem] 29inc:h-[19rem] 30inc:h-[11rem] 31inc:h-[12rem] 32inc:h-[15rem] text-white p-2 absolute truncate z-10">
                                             <div className="">{e.author}</div>
-                                            <div className="flex flex-row justify-between">
+                                            <div className="">
                                                 <div >1000 views</div>
                                             </div>
                                         </div>
-                                        <img className="static object-contain" src={e.download_url} alt="" />
+                                        <div className="w-12/12">
+                                            <img className="static object-contain" src={e.download_url} alt="" width={500} />
+                                        </div>
                                     </div>
                                 )
                             })
@@ -73,18 +79,21 @@ export default function People() {
 
                     </div>
                 </div>
-                <div className="w-4/12">
+                <div className="w-12/12 md:w-4/12">
                     {
                         highlightRight.map((e, i) => {
                             return (
-                                <div key={i} className="m-2 w-12/12 cursor-pointer">
-                                    <div className="text-white p-2 pt-20 absolute truncate z-10">
+                                <div key={i} className="w-12/12 m-2 cursor-pointer">
+                                    <div className="flex flex-col justify-end box-content h-[7.5rem] smm:h-[10rem] lg:h-[6rem] xl:h-[9rem] 3xl:h-[9rem] 14inc:h-[9rem] 15inc:h-[10rem] 16inc:h-[10rem] 17inc:h-[11rem]
+                                        18inc:h-[11rem] 19inc:h-[12rem] 20inc:h-[13rem] 21inc:h-[13rem] 22inc:h-[14rem] 23inc:h-[15rem] 24inc:h-[15rem] 25inc:h-[16rem] 26inc:h-[17rem] 27inc:h-[18rem] 28inc:h-[18.5rem] 29inc:h-[19rem] 30inc:h-[11rem] 31inc:h-[12rem] 32inc:h-[15rem] text-white p-2 absolute truncate z-10">
                                         <div className="">{e.author}</div>
-                                        <div className="flex flex-row justify-between">
+                                        <div className="">
                                             <div >1000 views</div>
                                         </div>
                                     </div>
-                                    <img className="static object-contain" src={e.download_url} alt="" />
+                                    <div className="w-12/12">
+                                        <img className="static object-contain" src={e.download_url} alt="" />
+                                    </div>
                                 </div>
                             )
                         })
